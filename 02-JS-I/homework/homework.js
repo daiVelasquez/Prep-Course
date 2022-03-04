@@ -25,11 +25,11 @@ const nuevoModulo = 21 % 5 === 1;
 // Pista: "console.log()" NO fucionará.
 // No cambies los nombres de las funciones.
 
-function devolverString() {
+function devolverString (srt) {
   // "Return" la string provista: str
   // Tu código:
-   return "srt";
-} devolverString ()
+   return "PalabraIngresada: " + str;
+} console.log (devolverString ( "Hi"));
 
 
 function suma(x, y) {
@@ -38,7 +38,7 @@ function suma(x, y) {
   // Tu código:
    return x + y;
 }  suma ( 6 , 7 );
-
+  
 
 
 function resta(x, y) {
@@ -53,7 +53,7 @@ function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
    return x * y;
-} multiplica ( 2 , 5 )
+} multiplica ( 2 , 5 );
 
 
 
@@ -61,7 +61,7 @@ function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
    return x / y;
-} divide ( 8 , 2 )
+} divide ( 8 , 2 );
 
 
 
@@ -73,20 +73,19 @@ function sonIguales(x, y) {
     return  true;
     }
     return false;
-} sonIguales ( 4 , 4)
+} sonIguales ( 4 , 4);
 
 
 
-function tienenMismaLongitud(str1, str2) {
+function tienenMismaLongitud(  str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-   if (str1.length  == str2.length) {
+   if (str1.length  === str2.length) {
      return true;
    }
      return false;
-}  tienenMismaLongitud ( Hola, Chau )
-   tienenMismaLongitud (cuatro , ocho )
+}  console.log(tienenMismaLongitud("Hola" , "Hola"));
 
 
 
@@ -97,7 +96,7 @@ function menosQueNoventa(num) {
    if (num < 90 ) {
     return true;
    } return false;
-} menosQueNoventa ( 40 )  
+} menosQueNoventa ( 40 );  
 
 
 
@@ -114,118 +113,161 @@ function mayorQueCincuenta(num) {
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
-  // Tu código:
-
+  // Tu código
    return x % y;
-} obtenerResto ( 21 , 5)
+} obtenerResto ( 21 , 5);
+
+
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
+   if (num%2 == 0 ) {
+    return true; 
+   } return false;
+} esPar (20);
 
-  
-}
+
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  
-}
+   if (num%2 != 0) {
+    return true;
+   } return false;
+} esImpar (13);
+
+
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  
-}
+   return Math.pow(num,2);
+} elevarAlCuadrado(4);
+
+
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  
-}
+  return Math.pow(num, 3);
+} elevarAlCubo(3);
+
+
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  
-}
+   return Math.pow(num,exponent);
+} elevar(8,2)
+
+
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  
-}
+  return Math.round(num);
+} redondearNumero (5,40);
+
+
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
-}
+   return Math.ceil(num);
+} redondearHaciaArriba (5,10);
+
+
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
-}
+  return Math.random();
+}numeroRandom();
+
+
 
 function esPositivo(numero) {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  
-}
+  if (numero > 0 ){
+   console.log("Es Positivo");
+  } if (numero < 0 ) 
+  { console.log( "Es Negativo"); 
+}   if (numero == 0 ) { return false; }
+} esPositivo(0);
+
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-}
+     return str + "!";
+  } console.log(agregarSimboloExclamacion(Hola));
+
+
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  
-}
+   return nombre + ' '  + apellido; 
+}  console.log(combinarNombres("Daiana " , "Velasquez"));
+
+
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  
-}
+   return "Hola" + ' '+ nombre + "!"
+} console.log("Dai");
+
+
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  
-}
+   const area = alto * ancho;
+   return area;
+} obtenerAreaRectangulo( 8 , 4);
+
+
 
 
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  
-}
+   const perimetro = lado *4 ;
+  return perimetro;
+} retornarPerimetro(12);
+
+
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
+   const areaTriangulo= (base * altura) / 2;
+   return areaTriangulo; 
+} areaDelTriangulo(20 , 30);
 
-}
 
 
 function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  
-}
+   const cambio= (euro* 1.20) / 1;
+  return cambio;
+} deEuroAdolar(100);
+
 
 
 function esVocal(letra){
@@ -234,8 +276,22 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
+
   
+  if (letra.length > 1 ) {
+    console.log('dato incorrecto');
+  }   
+      if(["a", "e", "i", "o", "u"].includes(letra.toLowerCase())){
+        console.log("Es Vocal!")  
+      }else {
+        console.log("Dato INCORRECTO!");
+        const i = letra;
+    }   
 }
+
+        
+
+
 
 
 
